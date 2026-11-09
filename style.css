@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --gelap: #201b18;
+    --oranye: #f28c28;
+    --krem: #fff7eb;
+    --putih: #ffffff;
+    --teks: #4f4944;
+    --abu: #817971;
+    --hijau: #218838;
+    --merah: #c62828;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--gelap);
+    background: var(--putih);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wadah {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+.header {
+    background: var(--gelap);
+    color: var(--putih);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--putih);
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.logo span,
+.hero-text h1 span,
+.judul-katalog h1 span {
+    color: var(--oranye);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+nav a {
+    color: #e8e1da;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.aktif {
+    color: var(--oranye);
+}
+
+.hero {
+    background: var(--krem);
+    padding: 70px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.label {
+    color: #d66c12;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.2rem, 5vw, 3.7rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text > p:not(.label) {
+    color: var(--teks);
+    margin-bottom: 28px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 16px 40px #201b1820;
+}
+
+.tombol {
+    display: inline-block;
+    background: var(--oranye);
+    color: var(--gelap);
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.tombol:hover {
+    background: #ffad50;
+    transform: translateY(-3px);
+}
+
+.tentang {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    text-align: center;
+}
+
+.tentang > p:not(.label) {
+    color: var(--abu);
+    max-width: 700px;
+    margin: 12px auto;
+}
+
+.tentang h2,
+.daftar-menu h2,
+.kontak h2 {
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+.fitur {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.fitur-card {
+    padding: 28px 20px;
+    border: 1px solid #eee5da;
+    border-radius: 16px;
+    background: var(--putih);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fitur-card:hover,
+.produk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #201b1814;
+}
+
+.fitur-card span {
+    font-size: 2.2rem;
+}
+
+.fitur-card h3 {
+    margin: 10px 0;
+}
+
+.fitur-card p {
+    color: var(--abu);
+    font-size: 0.9rem;
+}
+
+.judul-katalog {
+    background: var(--krem);
+    padding: 55px 0;
+    text-align: center;
+}
+
+.judul-katalog h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.judul-katalog p:not(.label) {
+    color: var(--teks);
+}
+
+.statistik {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.statistik div {
+    min-width: 130px;
+    padding: 14px 22px;
+    background: var(--putih);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #201b180c;
+}
+
+.statistik strong,
+.statistik span {
+    display: block;
+}
+
+.statistik strong {
+    font-size: 1.5rem;
+    color: #d66c12;
+}
+
+.statistik span {
+    color: var(--abu);
+    font-size: 0.8rem;
+}
+
+.daftar-menu {
+    padding-top: 55px;
+    padding-bottom: 70px;
+}
+
+.daftar-menu h2 {
+    margin-bottom: 28px;
+}
+
+.grid-produk {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.produk-card {
+    border: 1px solid #eee5da;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--putih);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produk-gambar {
+    height: 205px;
+    position: relative;
+    background: var(--krem);
+}
+
+.produk-gambar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kategori {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--oranye);
+    color: var(--gelap);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.produk-info {
+    padding: 20px;
+}
+
+.produk-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.produk-info > p {
+    min-height: 55px;
+    color: var(--abu);
+    font-size: 0.83rem;
+}
+
+.produk-bawah {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 18px 0;
+}
+
+.harga {
+    color: #d66c12;
+    font-size: 1.05rem;
+}
+
+.status {
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.tersedia {
+    color: var(--hijau);
+    background: #e7f5e9;
+}
+
+.habis {
+    color: var(--merah);
+    background: #fdeaea;
+}
+
+.tombol-pesan,
+.tombol-nonaktif {
+    display: block;
+    width: 100%;
+}
+
+.tombol-nonaktif {
+    color: #777;
+    background: #e5e5e5;
+    cursor: not-allowed;
+}
+
+.tombol-nonaktif:hover {
+    background: #e5e5e5;
+    transform: none;
+}
+
+.kontak {
+    padding: 55px 0;
+    background: var(--gelap);
+    color: var(--putih);
+    text-align: center;
+}
+
+.kontak p {
+    color: #d4ccc5;
+    margin: 12px 0 22px;
+}
+
+.kontak-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tombol-garis {
+    color: var(--putih);
+    background: transparent;
+    border: 1px solid var(--oranye);
+}
+
+.tombol-garis:hover {
+    color: var(--gelap);
+    background: var(--oranye);
+}
+
+.kontak .catatan {
+    font-size: 0.75rem;
+    margin-top: 20px;
+}
+
+.footer {
+    background: #15110f;
+    color: #c9c0b8;
+    padding: 22px 0;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer a {
+    color: var(--oranye);
+}
+
+@media (max-width: 800px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+
+    .grid-produk {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .fitur {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .navbar {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    .hero-image img {
+        height: 230px;
+    }
+
+    .grid-produk {
+        grid-template-columns: 1fr;
+    }
+
+    .produk-gambar {
+        height: 230px;
+    }
+
+    .statistik {
+        gap: 10px;
+    }
+
+    .statistik div {
+        min-width: 0;
+        flex: 1;
+        padding: 12px;
+    }
+}
